@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando nacionalidade</title>
+</head>
+<body>
+    País residente: <input type="text" name="country" id="country">
+    <input type="button" value="Verificar" onclick="verify()">
+    <p id="result"></p>
+    <script>        
+        function verify() {
+            let nationality = document.querySelector('input#country').value;
+            console.log(nationality);
+            if (nationality === 'Brasil') {
+                document.querySelector('p#result').innerHTML = 'Sua nacionalidade é brasileira!';
+            } else {
+                document.querySelector('p#result').innerHTML = 'Você não reside no Brasil, isso te faz um estrangeiro!';
+            }
+        }
+    </script>
+</body>
+</html>
