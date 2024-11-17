@@ -3,13 +3,15 @@ function count() {
     let numEnd = Number(document.querySelector('input#txtend').value);
     let numStep = Number(document.querySelector('input#txtstep').value);
 
-    if (numStart || numEnd || numStep == 0) {
+    if (numStart.length || numEnd.length || numStep.length == 0) {
+        result.innerHTML = 'Impossível contar!';
         alert('Você digitou parâmetros nulos. Verifique!');
         return;
     }
 
+    result.innerHTML = '';
     for (numStart; numStart <= numEnd; numStart += numStep) {
-        let result = document.querySelector('div#result');       
-        result.innerHTML += `${numStart} ${numStart + numStep > numEnd ? '👉🏁' : '👉'}`;        
+        let result = document.querySelector('div#result');   
+        result.innerHTML += `Contando: ${numStart} ${numStart + numStep > numEnd ? '👉🏁' : '👉'}`;        
     }
 }
