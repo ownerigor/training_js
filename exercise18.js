@@ -8,4 +8,3 @@ do {
     console.log(`Passo ${i}`);
     i++;
 } while (i <= 6);
-
