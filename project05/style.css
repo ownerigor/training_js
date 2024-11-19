@@ -22,3 +22,7 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+select#flist {
+    width: 150px;
+}
